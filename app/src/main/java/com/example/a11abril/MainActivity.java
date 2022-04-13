@@ -59,8 +59,15 @@ public class MainActivity extends AppCompatActivity {
 
         for (int i = this.palabra.length() - 1; i >= 0 ; i--) {
             invertido += this.palabra.charAt(i);
+
+
         }
-        txtResultado.setText(invertido);
+        if(invertido.equals(palabra)) {
+            txtResultado.setText("Es palindromo");
+        }
+        else {
+            txtResultado.setText("No es palindromo");
+        }
     }
 
     private void recibirInformacion() {
