@@ -46,10 +46,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void invertirPalabra() {
-        //Una anera directa de inveritr una cadena
+        //Una manera directa de inveritr una cadena
         //Netamente codigo java
-        palabra = new StringBuilder(palabra).reverse().toString();
-        txtResultado.setText(palabra);
+        // palabra = new StringBuilder(palabra).reverse().toString();
+        // Invertir palabra paso a paso
+        String invertido ="";
+        // la idea es que traten la cadena string como si fuera un Array
+        // donde cada letra esta en una posciion del array partiendo desde 0
+        // para tal efecto los strings tiene un metodo que les permite devolver un caracter
+        // de una posicion como si fuera un array
+        // El metodo se llama charAt
+
+        for (int i = this.palabra.length() - 1; i >= 0 ; i--) {
+            invertido += this.palabra.charAt(i);
+        }
+        txtResultado.setText(invertido);
     }
 
     private void recibirInformacion() {
