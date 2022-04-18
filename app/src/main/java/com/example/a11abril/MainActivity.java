@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         inicializarVistas();
+        //2222
         /*
         al configurar un boton para decirle que este pendiente al evento clicj de ese boton en pantalla
         con el uso del metodo .setOnClickListener()
